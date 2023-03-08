@@ -1,6 +1,9 @@
 // importaciones
 import React, {useState} from 'react'
 import './card.css';
+import CardImage from '../CardImage/CardImage';
+import CardBody from '../CardBody/CardBody';
+import CardFooter from '../CardFooter/CardFooter';
 
 const dummyText = ` --Most strange; no news yet of the ship we wait for. Mrs. Harker
 reported last night and this morning as usual: "lapping waves and
@@ -50,36 +53,13 @@ const Card = ({BGImage, creationDate, cardTitle, metadata}) => {
     // render de la app
     return (
         <div className="card">
-            <div className="card__image">
-                <img src={BGImage} alt="dasdasdasd"/>
-            </div>
-            <div className="card__copy">
-                <h1>{title}</h1>
-                <h2>{creationDate}, Noon.</h2>
-                
-                <p>
-                   {texto}
-                </p>
-                {JSON.stringify(metadata)}
+            <CardImage BGImage={BGImage}/>
+            <CardBody title={title} creationDate={creationDate} texto={texto} metadata={metadata}/>
+            <CardFooter/>
 
-                <div>
-                    <h5>MEtadta</h5>
-                    <p>
-                     author:   {metadata.author}
-                    </p>
-
-                    <p>
-                        company: {company}
-                    </p>
-
-                </div>
 
                 <button onClick = {changeCardTitle}> cambiar titulo</button>
                 <button onClick={changeCardDesc}> Cambiar Texto Descriptivo </button>
-
-                
-
-            </div>
         </div>
     )
 }
