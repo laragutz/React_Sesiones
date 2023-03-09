@@ -28,6 +28,6 @@ body {
     overflow: hidden;
     max-height: 200px;
     }
-    .card__copy {
+    .card__body {
     padding: 20px;
     }
