@@ -1,8 +1,15 @@
-const CardFooter = () => {
+const CardFooter = ({metadata,company}) => {
     return(
-        <div className="card-footer">
-            <button onClick = {changeCardTitle}> cambiar titulo</button>
-            <button onClick={changeCardDesc}> Cambiar Texto Descriptivo </button>
-        </div>
+        <div className="card_footer">
+            <h5>Metada</h5>
+            <p>
+                autor: {metadata.autor}
+            </p>
+            <p>
+                company: {company}
+            </p>
+        </div> 
     )
 }
+
+export default CardFooter

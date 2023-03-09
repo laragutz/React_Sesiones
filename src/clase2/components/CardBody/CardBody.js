@@ -1,25 +1,15 @@
-const CardBody = () =>{
+const CardBody = ({title, texto, creationDate, metadata}) =>{
     return(            
-    <div className="card__body">
-        <h1>{title}</h1>
-        <h2>{creationDate}, Noon.</h2>
+        <div className="card__body">
+            <h1>{title}</h1>
+            <h2>{creationDate}, Noon.</h2>
         
-        <p>
-        {texto}
-        </p>
-        {JSON.stringify(metadata)}
-
-        <div>
-            <h5>MEtadta</h5>
             <p>
-            author:   {metadata.author}
+                {texto}
             </p>
-
-            <p>
-                company: {company}
-            </p>
-
+            {JSON.stringify(metadata)}
         </div>
-    </div>
     )
 }
+
+export default CardBody

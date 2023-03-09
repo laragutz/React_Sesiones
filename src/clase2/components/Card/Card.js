@@ -22,7 +22,9 @@ const Card = ({BGImage, creationDate, cardTitle, metadata}) => {
 
 
         // leer valores de las props que vienen de un objeto
-        const {company} = metadata;
+        
+        //const {company} = metadata;
+        
         // const company = metadata.company;
 
         // ---------------------------------------
@@ -53,13 +55,23 @@ const Card = ({BGImage, creationDate, cardTitle, metadata}) => {
     // render de la app
     return (
         <div className="card">
-            <CardImage BGImage={BGImage}/>
-            <CardBody title={title} creationDate={creationDate} texto={texto} metadata={metadata}/>
-            <CardFooter/>
-
+            <CardImage 
+                BGImage={BGImage}
+            />
+            <CardBody 
+                title={title} 
+                creationDate={creationDate} 
+                texto={texto} 
+                metadata={metadata}
+            />
 
                 <button onClick = {changeCardTitle}> cambiar titulo</button>
                 <button onClick={changeCardDesc}> Cambiar Texto Descriptivo </button>
+
+            <CardFooter 
+                metadata={metadata}
+                company={metadata.company}
+            />
         </div>
     )
 }
