@@ -68,10 +68,7 @@ const Card = ({BGImage, creationDate, cardTitle, metadata}) => {
                 <button onClick = {changeCardTitle}> cambiar titulo</button>
                 <button onClick={changeCardDesc}> Cambiar Texto Descriptivo </button>
 
-            <CardFooter 
-                metadata={metadata}
-                company={metadata.company}
-            />
+
         </div>
     )
 }
